@@ -16,14 +16,44 @@
         <h1>LA COMMUNICATION DIGITAL DU FOOTBALL EN SUISSE ROMANDE</h1>
         <img src="Image_site/arrow-down.svg" id="fleche">
     </header>
+    <h2 id="compte"><span data-bind-global="count"></span> clubs, 1 rapport</h2>
     <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
     <section id="informations">
         <h3>Des chiffres qui résument l'état du digital dans les clubs Suisse</h3>
-        <p id="pourcentages">
-            82% n'ont pas de paid media<br>
-            71% ont un site web non optimisé sur mobile<br>
-            93% Ont instagram comme canal prinicipal<br>
-            64% n'ont pas de chaîne Youtube active</p>
+        <section id="pourcentages" class="pourcentages">
+    <div class="flip-card">
+        <input type="checkbox" id="card1" class="flip-checkbox">
+        <label for="card1" class="flip-card-inner">
+            <div class="flip-card-front">82%</div>
+            <div class="flip-card-back">N'ont pas de paid media</div>
+        </label>
+    </div>
+   
+    <div class="flip-card">
+        <input type="checkbox" id="card2" class="flip-checkbox">
+        <label for="card2" class="flip-card-inner">
+            <div class="flip-card-front">71%</div>
+            <div class="flip-card-back">Ont un site web non optimisé sur mobile</div>
+        </label>
+    </div>
+   
+    <div class="flip-card">
+        <input type="checkbox" id="card3" class="flip-checkbox">
+        <label for="card3" class="flip-card-inner">
+            <div class="flip-card-front">93%</div>
+            <div class="flip-card-back">Ont Instagram comme canal principal</div>
+        </label>
+    </div>
+   
+    <div class="flip-card">
+        <input type="checkbox" id="card4" class="flip-checkbox">
+        <label for="card4" class="flip-card-inner">
+            <div class="flip-card-front">64%</div>
+            <div class="flip-card-back">N'ont pas de chaîne Youtube active</div>
+        </label>
+    </div>
+</section>
+
         <img src="Image_site/pexels-ceir-junior-2149140349-30490956.jpg">
         <h3>Ce que contient le rapport</h3>
         <ul>
@@ -34,23 +64,13 @@
             <li>Recommendations stratégiques</li>
         </ul>
     </section>
-    <h2>28 clubs, 1 rapport</h2>
-    <h1 data-bind-global="count"></h1>
 
     <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-    <section id="teamList">
-        <article class="team-card">
-            <ul>
-                <li>FC Ajoie-Monterri</li>
-                <li>FC Amical St-Prex</li>
-                <li>FC Bassecourt</li>
-                <li>FC Bulle</li>
-                <li>FC Dardania Lausanne</li>
-                <li>FC Echallens</li>
-            </ul>
-        </article>
+   <section id="teamList" class="teams-scrollbox">
+        <div class="team-item">
+            <h2 data-bind="teamName"></h2>
+        </div>
     </section>
-
     <section id="text">
         <p>Les clubs Suisse ont un écosystème digital très hétérogène</p>
         <p>Instagram est le pilier absolu de la communication football en Suisse</p>
@@ -69,9 +89,9 @@
 
     <section id="formulaire">
         <form>
-            <input type="text" name="firstName">
-            <input type="text" name="lastName">
-            <input type="email" id="email" name="email">
+            <input type="text" name="firstName" required>
+            <input type="text" name="lastName" required>
+            <input type="email" id="email" name="email" required>
             <label for="email" id="labelEmail">e-mail</label>
             <input type="checkbox" id="newsletterAgreement" name="newsletterAgreement" required>
             <label for="newsletterAgreement">J'accepte de recevoir la newsletter</label>
