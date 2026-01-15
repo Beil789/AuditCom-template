@@ -5,6 +5,10 @@ img {
     width: 250px;
 }
 
+body {
+    background-color: #F2F0E4;
+}
+
 header>img {
     width: 100%;
     height: 100vh;
@@ -27,6 +31,24 @@ header>h1 {
     color: white;
     font-family: "inter";
     font-size: 4rem;
+}
+
+h2 {
+    font-family: "inter";
+    color: #52623E;
+    font-size: 60px;
+}
+
+h3 {
+    font-family: "inter";
+    color: #52623E;
+    font-size: 50px;
+}
+
+p {
+    font-family: "inter";
+    font-size: 36px;
+    color: #52623E;
 }
 
 footer {
