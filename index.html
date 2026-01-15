@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,92 @@
     <script src="src/main.js" type="module" defer></script>
 
 </head>
+
 <body>
+    <header>
+        <img src="Image_site/pexels-tima-miroshnichenko-6078311.jpg">
+        <h1>LA COMMUNICATION DIGITAL DU FOOTBALL EN SUISSE ROMANDE</h1>
+    </header>
     <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
+    <section id="informations">
+        <h2>Des chiffres qui résument l'état du digital dans les clubs Suisse</h2>
+        <ul id="pourcentages">
+            <li>82% n'ont pas de paid media</li>
+            <li>71% ont un site web non optimisé sur mobile</li>
+            <li>93% Ont instagram comme canal prinicipal</li>
+            <li>64% n'ont pas de chaîne Youtube active</li>
+        </ul>
+        <img src="Image_site/pexels-ceir-junior-2149140349-30490956.jpg">
+        <h2>Ce que contient le rapport</h2>
+        <ul>
+            <li>Analyse des sites web</li>
+            <li>Présence et usage des réseaux sociaux</li>
+            <li>Référencement et visibilité en ligne</li>
+            <li>Mise en valeur des sponsors</li>
+            <li>Recommendations stratégiques</li>
+        </ul>
+    </section>
+    <h1>28 clubs, 1 rapport</h1>
     <h1 data-bind-global="count"></h1>
-    
+
     <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
     <section id="teamList">
+        <article class="team-card">
+            <ul>
+                <li>FC Ajoie-Monterri</li>
+                <li>FC Amical St-Prex</li>
+                <li>FC Bassecourt</li>
+                <li>FC Bulle</li>
+                <li>FC Dardania Lausanne</li>
+                <li>FC Echallens</li>
+            </ul>
+        </article>
     </section>
 
+    <section id="text">
+        <p>Les clubs Suisse ont un écosystème digital très hétérogène</p>
+        <p>Instagram est le pilier absolu de la communication football en Suisse</p>
+        <p>Les sites web sont souvent le maillon faible</p>
+        <p>Le potentiel "business digital" est sous-exploité</p>
+    </section>
+
+    <section id="rapport_texte">
+        <h2>Pourquoi télécharger ce rapport ?</h2>
+        <p>Un condensé unique d’analyses, d’idées et d’opportunités pour les agences et les étudiants en
+            communication.
+            Tout ce qu’il faut pour comprendre, comparer et améliorer les stratégies digitales dans le
+            football suisse.
+        </p>
+    </section>
+
+    <section id="formulaire">
+        <form>
+            <input type="text" name="firstName">
+            <input type="text" name="lastName">
+            <input type="email" id="email" name="email">
+            <label for="email" id="labelEmail">e-mail</label>
+            <input type="checkbox" id="newsletterAgreement" name="newsletterAgreement" required>
+            <label for="newsletterAgreement">J'accepte de recevoir la newsletter</label>
+
+            <button type="submit" id="downloadButton">Découvrir</button>
+        </form>
+    </section>
+    <footer>
+        <p>Contact : ...</p>
+        <div id="pied_page">
+            <img src="Image_site/instagram-logo.svg">
+            <img src="Image_site/envelope-simple.svg">
+            <img src="Image_site/facebook-logo.svg">
+        </div>
+    </footer>
     <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
     <div id="messageContainer"></div>
 
     <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
     <form id="downloadForm">
     </form>
-    
+
 
 </body>
+
 </html>
