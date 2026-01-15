@@ -53,7 +53,7 @@ p {
 
 footer {
     background-color: #52623E;
-    height: 50px;
+    height: 60px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -64,6 +64,7 @@ footer>p {
     color: white;
     font-family: "inter";
     margin-left: 10px;
+    font-size: 20px;
 }
 
 footer>div {
