@@ -1,9 +1,12 @@
 @import "reset.css";
 @import "fonts.css";
 
-img {
-    width: 250px;
+* {
+    font-family: "inter";
+    color: #52623E;
+    box-sizing: border-box;
 }
+
 
 body {
     background-color: #F2F0E4;
@@ -59,46 +62,54 @@ header>h1 {
 
 h2#compte {
     text-transform: uppercase;
+    margin-left: 25px;
+    margin-top: 100px;
 }
 
 h2 {
-    font-family: "inter";
-    color: #52623E;
     font-size: 60px;
 }
 
 h3 {
-    font-family: "inter";
-    color: #52623E;
     font-size: 50px;
+    margin: 30px;
+}
+
+section {
+    display: grid;
 }
 
 p {
-    font-family: "inter";
     font-size: 36px;
-    color: #52623E;
+    margin: 30px;
 }
 
+ul {
+    font-size: 36px;
+}
+
+/*SECTION : Chiffres*/
 .pourcentages {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 100px;
     padding: 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
- 
+
 .flip-card {
     background-color: transparent;
     width: 100%;
     height: 200px;
     perspective: 1000px;
 }
- 
+
 .flip-checkbox {
-    display: none;  /* Cache la checkbox */
+    display: none;
+    /* Cache la checkbox */
 }
- 
+
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -108,12 +119,11 @@ p {
     cursor: pointer;
     display: block;
 }
- 
-/* Quand la checkbox est cochée, retourne la carte */
-.flip-checkbox:checked + .flip-card-inner {
+
+.flip-checkbox:checked+.flip-card-inner {/* Quand la checkbox est cochée, retourne la carte */
     transform: rotateY(180deg);
 }
- 
+
 .flip-card-front,
 .flip-card-back {
     position: absolute;
@@ -127,50 +137,259 @@ p {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
- 
+
 .flip-card-front {
     background-color: #CCE9A9;
-    color: #52623E;
-    font-family: "inter";
     font-size: 4rem;
     font-weight: bold;
 }
- 
+
 .flip-card-back {
     background-color: #52623E;
     color: #F2F0E4;
-    font-family: "inter";
     font-size: 1.3rem;
     text-align: center;
     transform: rotateY(180deg);
     line-height: 1.5;
 }
 
-ul {
-    font-family: "inter";
+/* SECTION : Pourquoi télécharger le rapport */
+#rapport-promo {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 80px 40px;
+    border-radius: 12px;
+    margin: 60px auto;
+    max-width: 1000px;
+}
+
+#rapport-promo h3 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-left: -20px;
+}
+
+#rapport-promo p {
     font-size: 36px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/* SECTION : Ce que contient le rapport */
+#rapport-contenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 80px;
+}
+
+#rapport-contenu .texte h3 {
+    margin-left: 0px;
+}
+
+#rapport-contenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#rapport-contenu li {
+    font-size: 32px;
+    color: #52623E;
+    margin-bottom: 12px;
+}
+
+#rapport-contenu .visuel img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/*SECTION : ?? des phrases d'accroche ?*/
+#ecosysteme-digital>p {
+    font-size: 30px;
+    transition: font-size 0.3s ease;
+}
+
+#ecosysteme-digital>p:hover {
+    font-size: 50px;
+}
+
+/*SECTION : image + équipe analyser*/
+.image-teams-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin: 60px 40px;
+    max-width: 1400px;
+}
+
+.left-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour la liste scrollable des équipes */
+#teamList {
+    height: 600px;
+    max-height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #CCE9A9;
+    margin-left: auto;
+    /* Modifié : margin-left auto pousse la box à droite */
+    max-width: 100%;
+}
+
+/*Mise en place dans la zone scrollable*/
+article {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+article>h2 {
+    font-size: 1rem;
+}
+
+article>img {
+    width: 40px;
+}
+
+/* Scrollbar personnalisée */
+#teamList::-webkit-scrollbar {
+    width: 8px;
+}
+
+#teamList::-webkit-scrollbar-thumb {
+    background: #52623E;
+    border-radius: 10px;
+}
+
+/*SECTION : Formulaire*/
+#formulaire {
+    background-color: #CCE9A9;
+    padding: 60px 40px;
+}
+
+#formulaire h2 {
+    font-family: "inter";
+    color: #52623E;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+#formulaire form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Style des inputs texte et email */
+#formulaire input[type="text"],
+#formulaire input[type="email"] {
+    width: 100%;
+    padding: 20px;
+    font-family: "inter";
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #F2F0E4;
     color: #52623E;
 }
 
-footer {
-    background-color: #52623E;
-    height: 60px;
-    width: 100%;
+#formulaire input::placeholder {
+    opacity: 0.6;
+}
+
+/* Container pour la checkbox et son label */
+#formulaire .checkbox-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+#formulaire input[type="checkbox"] {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    accent-color: #F2F0E4;
+    border: 3px solid #52623E;
+}
+
+#formulaire label[for="newsletterAgreement"] {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Bouton de téléchargement */
+#formulaire button {
+    background-color: #F2F0E4;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 25px 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#formulaire button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(82, 98, 62, 0.3);
+}
+
+#formulaire button:active {
+    transform: translateY(0);
+}
+
+/*SECTION : Footer*/
+footer {
+    background-color: #52623E;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 15px;
 }
 
 footer>p {
-    color: white;
+    color: #F2F0E4;
     font-family: "inter";
-    margin-left: 10px;
     font-size: 20px;
+    margin: 0;
+}
+
+footer>hr {
+    border: none;
+    border-top: 1px solid #F2F0E4;
+    width: 100%;
+    margin: 0;
 }
 
 footer>div {
     display: flex;
-    justify-items: flex-end;
+    gap: 15px;
+    justify-content: right;
 }
 
 footer>div>img {
@@ -178,53 +397,18 @@ footer>div>img {
     height: 1.5rem;
     justify-items: flex-end;
     margin-right: 10px;
-     filter: brightness(0) saturate(100%) invert(96%) sepia(6%) saturate(339%) hue-rotate(358deg) brightness(99%) contrast(93%);
+    filter: brightness(0) saturate(100%) invert(96%) sepia(6%) saturate(339%) hue-rotate(358deg) brightness(99%) contrast(93%);
 }
 
-/* Style pour la liste scrollable des équipes */
-#teamList {
-    height: 500px;
-    max-height: 70vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    border-radius: 8px;
-    padding: 15px;
-    background-color: #CCE9A9;
-    margin: 20px 20px 20px auto;  /* Modifié : margin-left auto pousse la box à droite */
-    max-width: 400px;
-}
- 
-article {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
- 
-article > h2 {
-    font-size: 1rem;
-}
- 
-article > img {
-    width: 40px;
-}
- 
-.team-item h1 {
-    margin: 0;
-    font-size: 60px;
-    color: #52623E;
-}
- 
-/* Scrollbar personnalisée */
-#teamList::-webkit-scrollbar {
-    width: 8px;
-}
- 
-#teamList::-webkit-scrollbar-track {
-    background: #c1cbb5;
-    border-radius: 10px;
-}
- 
-#teamList::-webkit-scrollbar-thumb {
-    background: #52623E;
-    border-radius: 10px;
+/* Responsive */
+@media (max-width: 900px) {
+    #rapport-contenu {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+
+    #rapport-contenu .visuel {
+        order: -1;
+        /* L’image passe au-dessus sur mobile */
+    }
 }
