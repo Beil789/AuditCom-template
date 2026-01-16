@@ -92,7 +92,7 @@ ul {
 .pourcentages {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 100px;
+    gap: 20px;
     padding: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -105,23 +105,19 @@ ul {
     perspective: 1000px;
 }
 
-.flip-checkbox {
-    display: none;
-    /* Cache la checkbox */
-}
-
 .flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    cursor: pointer;
-    display: block;
 }
 
-.flip-checkbox:checked+.flip-card-inner {/* Quand la checkbox est cochée, retourne la carte */
-    transform: rotateY(180deg);
+/* Effet au survol sur DESKTOP uniquement */
+@media (hover: hover) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
 }
 
 .flip-card-front,
@@ -137,6 +133,25 @@ ul {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.flip-card-front {
+    background-color: #CCE9A9;
+    color: #52623E;
+    font-family: "inter";
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.flip-card-back {
+    background-color: #52623E;
+    color: #F2F0E4;
+    font-family: "inter";
+    font-size: 1.3rem;
+    text-align: center;
+    transform: rotateY(180deg);
+    line-height: 1.5;
+}
+
 
 .flip-card-front {
     background-color: #CCE9A9;
@@ -377,6 +392,11 @@ footer>p {
     font-family: "inter";
     font-size: 20px;
     margin: 0;
+}
+
+footer>p#upper {
+    justify-self: left;
+    margin-top: 40px;
 }
 
 footer>hr {

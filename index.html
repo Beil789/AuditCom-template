@@ -12,44 +12,37 @@
 
 <body>
     <header>
-        <img src="Image_site/pexels-tima-miroshnichenko-6078311.jpg">
+        <img src="Image_site/pexels-tima-miroshnichenko-6078311.jpg" alt="équipe de foot">
         <h1>LA COMMUNICATION DIGITALE DU FOOTBALL EN SUISSE ROMANDE</h1>
-        <img src="Image_site/arrow-down.svg" id="fleche">
+        <img src="Image_site/arrow-down.svg" id="fleche" alt="fleche pointant vers le bas">
     </header>
     <h2 id="compte"><span data-bind-global="count"></span> clubs, 1 rapport</h2>
     <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
     <h3>Des chiffres qui résument l'état du digital dans les clubs Suisse</h3>
     <section id="pourcentages" class="pourcentages">
         <div class="flip-card">
-            <input type="checkbox" id="card1" class="flip-checkbox">
-            <label for="card1" class="flip-card-inner">
+            <div class="flip-card-inner">
                 <div class="flip-card-front">82%</div>
                 <div class="flip-card-back">Des clubs n'ont pas de paid media</div>
-            </label>
+            </div>
         </div>
-
         <div class="flip-card">
-            <input type="checkbox" id="card2" class="flip-checkbox">
-            <label for="card2" class="flip-card-inner">
+            <div class="flip-card-inner">
                 <div class="flip-card-front">71%</div>
                 <div class="flip-card-back">Des clubs ont un site web qui n'est pas optimisé sur mobile</div>
-            </label>
+            </div>
         </div>
-
         <div class="flip-card">
-            <input type="checkbox" id="card3" class="flip-checkbox">
-            <label for="card3" class="flip-card-inner">
+            <div class="flip-card-inner">
                 <div class="flip-card-front">93%</div>
                 <div class="flip-card-back">Des clubs utilisent Instagram comme canal principal de communication</div>
-            </label>
+            </div>
         </div>
-
         <div class="flip-card">
-            <input type="checkbox" id="card4" class="flip-checkbox">
-            <label for="card4" class="flip-card-inner">
+            <div class="flip-card-inner">
                 <div class="flip-card-front">64%</div>
                 <div class="flip-card-back">Des clubs n'ont pas de chaîne Youtube active</div>
-            </label>
+            </div>
         </div>
     </section>
 
@@ -69,7 +62,7 @@
         <div class="texte">
             <h3>Ce que contient le rapport</h3>
             <ul>
-                <li>Analyse des sites web</li>
+                <li>Analyse des sites web de 28 clubs</li>
                 <li>Présence et usage des réseaux sociaux</li>
                 <li>Référencement et visibilité en ligne</li>
                 <li>Mise en valeur des sponsors</li>
@@ -106,7 +99,7 @@
             <input type="text" name="lastName" placeholder="Prénom*" required>
             <input type="email" id="email" name="email" placeholder="E-mail*" required>
             <div class="checkbox-container">
-                <label for="newsletterAgreement">Accepter la newsletter *</label>
+                <label for="newsletterAgreement">Restons en contact en acceptant notre newsletter *</label>
                 <input type="checkbox" id="newsletterAgreement" name="newsletterAgreement" required>
             </div>
             <button type="submit" id="downloadButton">Télécharger</button>
@@ -121,11 +114,11 @@
 
     </section>
     <footer>
-        <p>Contact : ...</p>
+        <p id="upper">Contact : ...</p>
         <div id="pied_page">
-            <img src="Image_site/instagram-logo.svg">
-            <img src="Image_site/envelope-simple.svg">
-            <img src="Image_site/facebook-logo.svg">
+            <img src="Image_site/instagram-logo.svg" id="logo instagram">
+            <img src="Image_site/envelope-simple.svg" id="logo email">
+            <img src="Image_site/facebook-logo.svg" id="logo facebook">
         </div>
 
         <hr>
